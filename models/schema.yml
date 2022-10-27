@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: raw_covid19
     schema: airbyte_schema
-    database: covid19_database
+    database: AIRBYTE_DATABASE
     description: A replica of the covid19 demographics data from Google BigQuery Open data.
     tables:
       - name: stg_index
