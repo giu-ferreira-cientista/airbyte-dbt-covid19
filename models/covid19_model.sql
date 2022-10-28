@@ -32,8 +32,7 @@ index as (
 
 epidemiology_join as (
 
-    select
-        {{ dbt_utils.surrogate_key(['demographics._airbyte_demographics_hashid', 'economy._airbyte_economy_hashid']) }} as covid19_sk,
+    select        
         epidemiology.date,
         epidemiology.location_key,
         iff(epidemiology.new_confirmed = 'NaN', 0, epidemiology.new_confirmed) as new_confirmed,
