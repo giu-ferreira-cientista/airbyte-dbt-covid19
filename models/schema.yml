@@ -8,7 +8,7 @@ sources:
     tables:
       - name: index
         columns:
-          - name: _airbyte_stg_index_hashid
+          - name: _airbyte_index_hashid
             description: Hash column based on the values in the record.
             tests:
               - unique
@@ -16,7 +16,7 @@ sources:
 
       - name: demographics
         columns:
-          - name: _airbyte_stg_demographics_hashid
+          - name: _airbyte_demographics_hashid
             description: Hash column based on the values in the record.
             tests:
               - unique
@@ -24,7 +24,7 @@ sources:
 
       - name: economy
         columns:
-          - name: _airbyte_stg_economy_hashid
+          - name: _airbyte_economy_hashid
             description: Hash column based on the values in the record.
             tests:
               - unique
@@ -32,7 +32,7 @@ sources:
 
       - name: epidemiology
         columns:
-          - name: _airbyte_stg_epidemiology_hashid
+          - name: _airbyte_epidemiology_hashid
             description: Hash column based on the values in the record.
             tests:
               - unique
