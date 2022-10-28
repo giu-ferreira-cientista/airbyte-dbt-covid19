@@ -44,13 +44,6 @@ models:
   - name: base_index
     config:
       materialized: view  
-    columns: 
-      - name: country_name
-        tests:
-          - accepted_values:
-              values: ['United States', 'Canada', 'Mexico']
-              config:
-                severity: warn
 
   - name: base_demographics
     config:
@@ -66,10 +59,6 @@ models:
       materialized: view
     columns:
       - name: location_key
-        tests:
-          - unique
-          - not_null
-      - name: status
         tests:
           - unique
           - not_null
