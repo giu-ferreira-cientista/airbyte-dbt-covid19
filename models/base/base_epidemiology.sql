@@ -1,7 +1,7 @@
 with base_epidemiology as (
 
     select 
-        _airbyte_stg_epidemiology_hashid,
+        _airbyte_epidemiology_hashid,
         date,
         location_key,
         new_confirmed,
@@ -12,7 +12,7 @@ with base_epidemiology as (
         cumulative_deceased,
         cumulative_recovered,
         cumulative_tested 
-    from {{ source('raw_covid19', 'stg_epidemiology') }}
+    from {{ source('raw_covid19', 'epidemiology') }}
 
 )
 
