@@ -1,7 +1,7 @@
 with base_demographics as (
 
     select 
-        _airbyte_stg_demographics_hashid,
+        _airbyte_demographics_hashid,
         location_key,
         population,
         population_male,
@@ -21,7 +21,7 @@ with base_demographics as (
         population_age_60_69,
         population_age_70_79,
         population_age_80_and_older
-    from {{ source('raw_covid19', 'stg_demographics') }}
+    from {{ source('raw_covid19', 'demographics') }}
 
 )
 

@@ -6,7 +6,7 @@ sources:
     database: AIRBYTE_DATABASE
     description: A replica of the covid19 demographics data from Google BigQuery Open data.
     tables:
-      - name: stg_index
+      - name: index
         columns:
           - name: _airbyte_stg_index_hashid
             description: Hash column based on the values in the record.
@@ -14,7 +14,7 @@ sources:
               - unique
               - not_null
 
-      - name: stg_demographics
+      - name: demographics
         columns:
           - name: _airbyte_stg_demographics_hashid
             description: Hash column based on the values in the record.
@@ -22,7 +22,7 @@ sources:
               - unique
               - not_null
 
-      - name: stg_economy
+      - name: economy
         columns:
           - name: _airbyte_stg_economy_hashid
             description: Hash column based on the values in the record.
@@ -30,7 +30,7 @@ sources:
               - unique
               - not_null
 
-      - name: stg_epidemiology
+      - name: epidemiology
         columns:
           - name: _airbyte_stg_epidemiology_hashid
             description: Hash column based on the values in the record.

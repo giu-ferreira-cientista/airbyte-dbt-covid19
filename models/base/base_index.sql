@@ -1,7 +1,7 @@
 with base_index as (
 
     select 
-        _airbyte_stg_index_hashid,
+        _airbyte_index_hashid,
         place_id, 
         wikidata_id, 
         country_code,
@@ -17,7 +17,7 @@ with base_index as (
         aggregation_level, 
         iso_3166_1_alpha_2,
         iso_3166_1_alpha_3
-    from {{ source('raw_covid19', 'stg_index') }}
+    from {{ source('raw_covid19', 'index') }}
 
 )
 
